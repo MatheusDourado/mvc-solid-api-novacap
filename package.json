@@ -9,7 +9,7 @@
 		"nodemon": "^3.1.4"
 	},
 	"scripts": {
-		"start": "node script.js",
-		"dev": "nodemon script.js"
+		"start": "node app.js",
+		"dev": "nodemon app.js"
 	}
 }
