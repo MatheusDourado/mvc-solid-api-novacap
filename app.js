@@ -8,6 +8,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+const corsOptions = {
+    origin: 'https://atendimento.df.gov.br', 
+    methods: ['GET', 'POST'], 
+    allowedHeaders: ['Content-Type'] 
+};
+
+app.use(cors(corsOptions));
 
 app.use('/auth', authRoutes);
 app.use('/data', dataRoutes);
